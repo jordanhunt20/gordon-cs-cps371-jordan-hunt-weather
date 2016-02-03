@@ -1,0 +1,11 @@
+<ion-view title="Cities" style="background-image: url('../img/background-image.jpg')">
+  <ion-content class="has-header">
+        <ion-list>
+              <ion-item ng-repeat="city in cities" style="background-image: url(img/background-image.jpg)">
+              <span href="#" ng-click="changeCity('{{city.id}}')">
+                {{city.name}}
+              </span> 
+              </ion-item>
+        </ion-list>
+   </ion-content>
+</ion-view>

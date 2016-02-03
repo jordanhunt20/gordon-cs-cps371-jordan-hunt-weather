@@ -1,0 +1,34 @@
+<ion-view title="Current Weather for {{city}}" cache-view="false" style="background-image: url('img/background-image.jpg')">
+  <ion-content class="has-header" style="background-image: url('img/background-image.jpg')">
+    <ion-list style="background-image: url('img/background-image.jpg')">
+      <ion-item style="background-image: url('img/background-image.jpg')">
+        It is currently {{summary}} with a wind speed of {{windSpeed}} mph.
+      </ion-item>
+      <div ng-if="tempDif <= 2">
+      <ion-item style="background-image: url('img/background-image.jpg')">
+        The temperature is {{temperature}} with little to no wind chill.
+      </ion-item>
+      </div>
+      <div ng-if="tempDif > 2">
+      <ion-item style="background-image: url('img/background-image.jpg')">
+        The temperature is {{temperature}} with a windchill of {{apparentTemperature}}
+      </ion-item>
+      </div>
+      <div ng-if="precipIntensity != 0">
+      <ion-item style="background-image: url('img/background-image.jpg')">
+        It is currently {{precipType}}ing {{precipIntensity}}.
+      </ion-item>
+      </div>
+      <div ng-if="nearestStormDistance != 0">
+      <ion-item style="background-image: url('img/background-image.jpg')">
+        The nearest storm is {{nearestStormDistance}} miles away.
+      </ion-item>
+      </div>
+      <div ng-if="nearestStormDistance == 0">
+      <ion-item style="background-image: url('img/background-image.jpg')">
+        There is currently a storm in the vicinity.
+      </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
